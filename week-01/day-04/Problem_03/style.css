@@ -1,0 +1,21 @@
+p{
+  font-size: 30px;
+  color: blue;
+  background-color: yellow;
+  width: 240px;
+  border: solid black;
+  padding: 20px;
+  margin: 0px;
+  }
+
+.fruit{
+  background-color: green;
+  width: 290px;
+  margin: 10px;
+  padding: 40px;
+}
+
+.vegetable p{
+  color: red;
+  background-color: rgb(0, 255, 255);
+}
