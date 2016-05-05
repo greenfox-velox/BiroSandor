@@ -1,0 +1,24 @@
+body{
+  font-size: 18px;
+  margin: 40px;
+}
+
+article{
+  width: 320px;
+}
+
+p{
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-left-style: solid;
+  border-left-width: 3px;
+  padding: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.last{
+  border-bottom: none;
+}

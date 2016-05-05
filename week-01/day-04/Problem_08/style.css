@@ -1,0 +1,27 @@
+body{
+  font-size: 18px;
+  margin: 40px;
+}
+
+article{
+  width: 320px;
+}
+
+p{
+  border: 3px solid;
+  padding: 20px;
+  background-image: url(https://github.com/greenfox-velox/velox-syllabus/blob/master/week-01/4-html-css/duck.png?raw=true);
+  background-repeat: no-repeat;
+}
+
+.left{
+  background-position: left;
+}
+
+.right{
+  background-position: right;
+}
+
+.center{
+background-position: center;
+}

@@ -1,0 +1,14 @@
+body{
+  font-size: 18px;
+  margin: 40px;
+}
+
+article{
+  width: 320px;
+}
+
+p{
+  border-left-style: solid;
+  border-left-width: 3px;
+  padding: 0 0 0 20px;
+}
