@@ -1,0 +1,35 @@
+header{
+
+  width: 95%;
+  height: 500px;
+  background-image: url(https://raw.githubusercontent.com/greenfox-velox/velox-syllabus/master/week-01/5-cv/project/anakin.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+
+}
+
+body{
+  margin: 0;
+}
+
+h1{
+  padding: 0px 0px 0px 100px;
+  margin: 0px;
+  font-family: fantasy;
+  color: #222222;
+  font-size: 70px;
+}
+
+h2{
+  padding: 200px 0px 0px 100px;
+  margin: 0px;
+  font-family: fantasy;
+  color: #222222;
+  font-size: 40px;
+}
+
+.grey{
+  background-color: grey;
+  color: white;
+}
