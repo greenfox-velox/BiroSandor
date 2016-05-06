@@ -1,35 +1,66 @@
 header{
-
   width: 95%;
-  height: 500px;
+  height: 100%;
   background-image: url(https://raw.githubusercontent.com/greenfox-velox/velox-syllabus/master/week-01/5-cv/project/anakin.png);
-  background-size: 100%;
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
   margin: 0 auto;
-
-}
-
-body{
-  margin: 0;
 }
 
 h1{
-  padding: 0px 0px 0px 100px;
-  margin: 0px;
-  font-family: fantasy;
+  margin: 0px 25%;
+  padding-top: 200px;
+  font-family: Abril fatface;
+  font-weight: lighter;
   color: #222222;
   font-size: 70px;
 }
 
-h2{
-  padding: 200px 0px 0px 100px;
-  margin: 0px;
-  font-family: fantasy;
-  color: #222222;
-  font-size: 40px;
+span{
+  font-size: 0.5em;
 }
 
-.grey{
-  background-color: grey;
+body{
+  margin: 0;
+  font-family: Josefin Sans;
+  color: #222222;
+  font-size: 18px;
+}
+
+article{
+  margin: 0 25%;
+  line-height: 30px;
+}
+
+.second > p{
+  font-size: 0.75em;
+  line-height: 20px;
+}
+
+blockquote{
+  font-family: Abril fatface;
+  font-size: 2.5em;
+  background-color: #444444;
   color: white;
+  display: block;
+  margin: 0 20%;
+  padding: 1%;
+}
+
+h2{
+  font-size: 25px;
+  text-transform: uppercase;
+  margin: 10% 0;
+}
+
+.table li{
+  font-size: 14px;
+  list-style-type: square;
+}
+
+hr{
+  border-width: medium;
+  border-style: solid;
+  border-color: black;
 }
