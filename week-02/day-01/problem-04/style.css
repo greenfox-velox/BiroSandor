@@ -1,0 +1,10 @@
+.over {
+  width: 245px;
+  height: 155px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.over p:first-child {
+  color: red;
+}

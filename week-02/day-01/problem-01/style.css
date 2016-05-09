@@ -1,0 +1,26 @@
+main {
+  width: 380px;
+  height: 540px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 2px 45px;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.first-par, .second-par {
+  border-bottom: 2px solid black;
+}
+
+
+img {
+  margin: 25px;
+}
+
+.first-par img {
+  float: left;
+}
+
+.second-par img {
+  float: right;
+}
