@@ -1,0 +1,10 @@
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+
+label > span {
+  flex-flow: column;
+}
