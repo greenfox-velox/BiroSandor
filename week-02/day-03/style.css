@@ -15,8 +15,25 @@ header {
 
 main {
   width: 100%;
-  height: 100px;
+  height: 100%;
   background-color: green;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.img_margaret {
+  width: 220px;
+  height: 277px;
+}
+
+
+.profil {
+  float: right;
+  width: 270px;
+  height: 520px;
+  background-color: #f9f9f9;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 footer {
@@ -26,8 +43,9 @@ footer {
 }
 
 aside {
-  min-width: 100px;
-  background-color: blue;
+  min-width: 160px;
+  max-width: 160px;
+  background-color: lightblue;
 }
 
 .menu-up {
@@ -39,3 +57,27 @@ aside {
   display: flex;
   justify-content: space-between;
  }
+
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+section h1, h2 {
+  border-bottom: 1px solid grey;
+}
+
+.contents {
+  width: 120px;
+  height: 260px;
+  border: 1px solid grey;
+  background-color: #f9f9f9;
+}
