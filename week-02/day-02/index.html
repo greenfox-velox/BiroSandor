@@ -92,7 +92,8 @@
             </div>
             <div class="upload">
               <label for="file"><p>CV feltoltes</p></label>
-              <input type="file" id="file">
+              <input type="file" id="selectedFile" style="display: none;" />
+<input type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" />
             </div>
             <div class="accept">
               <label for="accept"><input type="checkbox" id="accept" name="accept" value="accept"><span>Elfogadom a <a href="">felhasznalasi felteteleket!</a></span></label>
