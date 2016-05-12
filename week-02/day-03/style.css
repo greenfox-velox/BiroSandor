@@ -1,6 +1,30 @@
 body {
   display: flex;
   margin: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+aside {
+  width: 175px;
+  background-color: #f6f6f6;
+  box-sizing: border-box;
+  padding: 25px;
+}
+
+.aside_link div {
+  border-bottom: 1px solid grey;
+}
+
+.aside_link ul {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .wrapper {
@@ -9,16 +33,93 @@ body {
 
 header {
   width: 100%;
-  height: 100px;
-  background-color: red;
+  height: 80px;
+  background-color: #f6f6f6;
+}
+
+.menu-up {
+  text-align: right;
+  height: 20px;
+}
+
+.menu-up a {
+  margin-left: 15px;
+}
+
+.menu-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 60px;
+ }
+
+form {
+  display: inline;
+}
+
+.menu-down a {
+  border-right: 1px solid #a7d7f9;
+  border-bottom: 1px solid #a7d7f9;
+  border-left: 1px solid #a7d7f9;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 main {
   width: 100%;
   height: 100%;
-  background-color: green;
+  background-color: #ffffff;
   padding: 25px;
   box-sizing: border-box;
+  border: 1px solid #a7d7f9;
+}
+
+h1 {
+  padding-bottom: 5px;
+  font-size: 30px;
+  font-family: Georgia;
+  font-weight: lighter;
+}
+
+h2 {
+  overflow: hidden;
+  font-family: Georgia;
+  font-weight: lighter;
+}
+
+section h1, h2 {
+  border-bottom: 1px solid grey;
+}
+
+.picbox {
+  border: 1px solid grey;
+  float: right;
+  background-color: #f9f9f9;
+}
+
+
+.picbox p {
+  margin: 0px;
+}
+
+img {
+  margin: auto;
+  display: block;
+  padding: 5px;
+}
+
+.profil {
+  width: 270px;
+  height: 520px;
+  margin-left: 20px;
+}
+
+.margaret_pic {
+  text-align: center;
+}
+
+.margaret_pic h3 {
+  margin: 0;
 }
 
 .img_margaret {
@@ -26,53 +127,18 @@ main {
   height: 277px;
 }
 
-
-.profil {
-  float: right;
-  width: 270px;
-  height: 520px;
-  background-color: #f9f9f9;
-  margin-right: 25px;
-  margin-left: 25px;
+dl {
+  line-height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-footer {
-  width: 100%;
-  height: 100px;
-  background-color: purple;
+dt {
+  float: left;
 }
 
-aside {
-  min-width: 160px;
-  max-width: 160px;
-  background-color: lightblue;
-}
-
-.menu-up {
-  display: flex;
-  justify-content: flex-end;
-}
-
- .menu-nav {
-  display: flex;
-  justify-content: space-between;
- }
-
-ul {
-  list-style: none;
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-h1 {
-  margin: 0;
-}
-
-section h1, h2 {
-  border-bottom: 1px solid grey;
+dd {
+  margin-left: 30%;
 }
 
 .contents {
@@ -80,4 +146,51 @@ section h1, h2 {
   height: 260px;
   border: 1px solid grey;
   background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+.nasa_prof {
+  width: 230px;
+  height: 220px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.nasa_pic {
+  width: 220px;
+  height: 170px;
+}
+
+.apollo_prof {
+  width: 230px;
+  height: 350px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.apollo_pic {
+  width: 220px;
+  height: 280px;
+}
+
+.legacy_prof {
+  width: 190px;
+  height: 290px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.legacy_pic {
+  width: 180px;
+  height: 235px;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #f6f6f6;
 }
