@@ -4,22 +4,26 @@ body {
   margin: 0 auto;
 }
 
-.main {
+.aside {
   display: flex;
   justify-content: space-between;
-  
 }
 
-.light_blue {
+header, footer {
   width: 100%;
   height: 100px;
-  background-color: #00FFFF;
+}
 
+header {
+  background-color: #00ffff;
+}
+
+.orange, .purple {
+  min-width: 100px;
+  height: 500px;
 }
 
 .orange {
-  min-width: 100px;
-  height: 500px;
   background-color: orange;
 }
 
@@ -28,7 +32,6 @@ body {
   height: 500px;
   background-color: red;
   position: relative;
-
 }
 
 .black {
@@ -41,12 +44,9 @@ body {
 }
 
 .purple {
-  min-width: 100px;
-  height: 500px;
   background-color: purple;
 }
 
-.blue {
-  width: 100%;
-  height: 100px;
+footer {
   background-color: blue;
+}

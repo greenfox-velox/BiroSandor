@@ -60,10 +60,6 @@ header {
   height: 20px;
 }
 
-.menu-up a {
-  margin-left: 15px;
-}
-
 .menu-up p {
   display: inline;
 }
@@ -73,6 +69,10 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   height: 60px;
+}
+
+.menu-up a {
+  margin-left: 15px;
 }
 
 .menu-down a {
