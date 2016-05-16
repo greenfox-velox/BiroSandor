@@ -56,7 +56,7 @@ p {
   margin: 5px;
 }
 
-.button {
+footer {
   display: flex;
   justify-content: space-between;
 }
