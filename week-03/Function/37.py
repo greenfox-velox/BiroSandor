@@ -5,8 +5,7 @@ numbers = [3, 4, 5, 6, 7]
 
 def odd(input):
     for i in input
+        even = []
         if i % 2 != 0:
-            return odd
-        else:
-
-odd(numbers)
+            even = [i]
+        return even
