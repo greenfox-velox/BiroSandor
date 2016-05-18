@@ -4,6 +4,8 @@ ag = [3, 4, 5, 6, 7]
 a = 0
 ag_length = len(ag)
 
+#1
 while a < ag_length:
-    print(ag[a] * 2)
+    ag[a] *= 2
     a += 1
+print(ag)

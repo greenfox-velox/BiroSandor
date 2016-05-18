@@ -3,5 +3,5 @@
 a = 0
 
 while a < 20:
-    print (a + 2)
+    print (a)
     a += 2
