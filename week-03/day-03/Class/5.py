@@ -20,11 +20,13 @@ class Stack():
 
     def pop(self):
         # new_list = []
-        # last_element = self.list[-1]
-        # for i in range(4):
-        #     new_list += i
-        # return last_element
+        #
+        # for i in range(0, 2):
+        #     last_element = self.list[-1]
+        #     new_list += [self.list[i]]
+        #
         # new_list = self.list
+        # return last_element
         last_element = self.list[-1]
         self.list = self.list[0:-1]
         return last_element
