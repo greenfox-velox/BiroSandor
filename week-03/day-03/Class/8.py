@@ -17,11 +17,12 @@ class Person():
 
 class Student(Person):
 
-    def __init__(self):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
         self.gradelist=[]
 
     def add_grade(self, grade):
-        if self.grade > 0 and self.grade < 6:
+        #if self.grade > 0 and self.grade < 6:
             self.gradelist.append(self.grade)
 
     def get_average(self):
@@ -37,11 +38,11 @@ class Student(Person):
         print(self.first_name, self.last_name, grades, self.grade, average, self.average)
 
 person1 = Person('Lechi', 'Kurbanov')
-print (person1.greet())
+person1.greet()
+person1 = Student('Lechi', 'Kurbanov')
 person1.add_grade(1)
 person1.add_grade(2)
 person1.add_grade(3)
 person1.add_grade(4)
 person1.add_grade(5)
-
-print (person1.salute())
+person1.salute()
