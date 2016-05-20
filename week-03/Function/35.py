@@ -18,7 +18,7 @@ number = 5
 
 def fakt(input):
     faktor = 1
-    for i in range(1, number + 1):
+    for i in range(1, input + 1):
         faktor *= i
     return faktor
 
