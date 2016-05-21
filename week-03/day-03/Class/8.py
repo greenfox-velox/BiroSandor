@@ -23,7 +23,7 @@ class Student(Person):
 
     def add_grade(self, grade):
         #if self.grade > 0 and self.grade < 6:
-            self.gradelist.append(self.grade)
+            self.gradelist.append(grade)
 
     def get_average(self):
         total = 0
@@ -35,7 +35,7 @@ class Student(Person):
     def salute(self):
         grades = 'Your grades is:'
         avarage = 'and your average is:'
-        print(self.first_name, self.last_name, grades, self.grade, average, self.average)
+        print(self.first_name, self.last_name, grades, self.average)
 
 person1 = Person('Lechi', 'Kurbanov')
 person1.greet()
