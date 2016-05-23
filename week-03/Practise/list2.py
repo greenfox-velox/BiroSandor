@@ -4,7 +4,6 @@
 numbers = [4, 5, 7]
 numbers2 = [4, 1, 7]
 
-
 new_list = numbers + numbers2
 result = []
 for i in new_list:
