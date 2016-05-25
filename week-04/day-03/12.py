@@ -25,7 +25,7 @@ canvas.pack()
 #
 
 
-canvas_size = 400
+canvas_size = 320
 size = canvas_size / 8
 
 
