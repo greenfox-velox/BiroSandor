@@ -8,3 +8,5 @@ def decrypt(file_name):
             output += i[x]
     f.close()
     return output
+
+print(decrypt('texts/duplicated_chars.txt'))
