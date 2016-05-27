@@ -8,9 +8,8 @@
 #
 # It should take a number as parameter that describes how many lines the triangle has
 
-def tree_maker(input):
+def triangle(input):
     for i in range(input + 1):
         print((input - i) * ' ' + i * '*'+ '*' + i * '*')
-    
 
-tree_maker(7)
+triangle(7)

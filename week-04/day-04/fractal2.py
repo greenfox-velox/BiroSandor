@@ -1,7 +1,7 @@
 from tkinter import *
 
 root = Tk()
-canvas = Canvas(root, width=600, height=600)
+canvas = Canvas(root, width=600, height=600, bg= 'yellow')
 canvas.pack()
 
 # def fractal(x, y, size):
