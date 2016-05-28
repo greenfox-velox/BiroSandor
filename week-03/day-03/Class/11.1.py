@@ -2,7 +2,7 @@ def draw_triangle_or_diamond(input, type, character = '*'):
     if type < 0 or type > 1:
         print ('hiba: masodik parameter erteke 0 vagy 1 lehet.')
         return
-
+    
     for i in range(input + 1):
         print((input - i) * ' ' +
          i * str(character)+ str(character) + i * str(character))
