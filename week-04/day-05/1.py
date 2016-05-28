@@ -9,7 +9,7 @@ canvas.pack()
 
 def draw_triangle(x, y, size):
     h = ((3**0.5)/2)
-    canvas.create_polygon(x, y, x + size, y, x + size / 2, h * size, fill = 'white', outline = 'black')
+    canvas.create_polygon(x, y, x + size, y, x + size / 2, y + h * size, fill = 'white', outline = 'black')
 
 
 def draw_fractal(x, y, size):
