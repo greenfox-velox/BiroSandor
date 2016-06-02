@@ -1,45 +1,36 @@
 import sys
 import csv
 
-class Todo:
+class todo():
     def __init__(self):
-        try:
-            self.open_csv()
-        except FileNotFoundError:
-            pass
+        pass
 
     def usage(self):
         text = 'Python to do application\n========================\n\n-l   Lists all the tasks\n-a   Adds a new task\n-r   Removes an task\n-c   Completes an task'
         return text
 
-    def open_csv(self):
-        with open('list.csv', newline='') as f:
-            self.todo_list = list(csv.reader(f, delimiter=';'))
-        return self.todo_list
-
-    # def csv_write(self):
-    #     with open('list.csv', 'w' ,newline='') as f:
-    #         self.todo_list = list(csv.reader(f))
-    #     return self.todo_list
 
     def list(self):
-            output = ''
-            j = 0
-            if len(self.todo_list) == 0:
-                no_todos = 'No todos for today! :)'
-                return no_todos
-            else:
-                for i in self.todo_list:
-                    j += 1
-                    output += str(j) + ' - ' + str(i[0])+ '\n'
-                return output
+        f = open('list.txt')
+        todo_list = f.readlines()
+        f.close()
+        output = ''
+        j = 0
+        if todo_list == []:
+            no_todos = 'No todos for today! :)'
+            return no_todos
+        else:
+            for i in todo_list:
+                j += 1
+                output += str(j) + ' - ' + i
+            return output
 
     def add_new_task(self):
         if len(sys.argv) == 2:
             print ('Unable to add: No task is provided')
         else:
-            f = open('list.csv', 'a')
-            f.write('False;' + task + '\n')
+            f = open('list.txt', 'a')
+            f.write(sys.argv[2] + '\n')
             f.close()
 
     def remove_task(self):
@@ -80,6 +71,6 @@ class Todo:
             self.remove_task()
 
 
-first = Todo()
+first = todo()
 first.main()
 first.argument_error()
