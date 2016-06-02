@@ -1,4 +1,5 @@
 import sys
+import csv
 
 class todo():
     def __init__(self):
@@ -23,34 +24,53 @@ class todo():
                 output += str(j) + ' - ' + i
             return output
 
-    def main(self):
-        if len(sys.argv) == 1:
-            print(self.usage())
-        elif sys.argv[1] == '-l':
-            print(self.list())
-        elif sys.argv[1] == '-a':
-            if len(sys.argv) == 2:
-                raise ValueError('Unable to add: No task is provided')
-            else:
-                f = open('list.txt', 'a')
-                f.write(sys.argv[2] + '\n')
-                f.close()
-        elif sys.argv[1] == '-r':
+    def add_new_task(self):
+        if len(sys.argv) == 2:
+            print ('Unable to add: No task is provided')
+        else:
+            f = open('list.txt', 'a')
+            f.write(sys.argv[2] + '\n')
+            f.close()
+
+    def remove_task(self):
+        try:
             f = open('list.txt')
             remove_list = f.readlines()
-            remove_list = remove_list[:(int(sys.argv[2]))-1] + remove_list[(int(sys.argv[2])):]
             f.close()
+            remove_list = remove_list[:(int(sys.argv[2]))-1] + remove_list[(int(sys.argv[2])):]
             remove_output = ''
             f = open('list.txt', 'w')
             for item in remove_list:
                 remove_output += item
             f.write(remove_output)
             f.close()
+            f = open('list.txt')
+            listed_txt = f.readlines()
+            length_list = len(listed_txt)
+            f.close()
+            if int(sys.argv[2]) > length_list:
+                print('Unable to remove: Index is out of bound')
+        except ValueError:
+            print('Unable to remove: Index is not a number')
+        except IndexError:
+            print('Unable to remove: No index is provided')
 
+    def argument_error(self):
+        if sys.argv[1] != '-l' and sys.argv[1] != '-a' and sys.argv[1] != '-r' and sys.argv[1] != '-c':
+            print('Unsupported argument')
+
+
+    def main(self):
+        if len(sys.argv) == 1:
+            print(self.usage())
+        elif sys.argv[1] == '-l':
+            print(self.list())
+        elif sys.argv[1] == '-a':
+            self.add_new_task()
+        elif sys.argv[1] == '-r':
+            self.remove_task()
 
 
 first = todo()
-try:
-    first.main()
-except ValueError as e:
-    print(e)
+first.main()
+first.argument_error()
