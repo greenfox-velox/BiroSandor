@@ -57,8 +57,10 @@ class todo():
             print('Unable to remove: No index is provided')
 
     def argument_error(self):
-        if sys.argv[1] != '-l' and sys.argv[1] != '-a' and sys.argv[1] != '-r' and sys.argv[1] != '-c':
-            print('Unsupported argument')
+        if len(sys.argv) > 1:
+            if sys.argv[1] != '-l' and sys.argv[1] != '-a' and sys.argv[1] != '-r' and sys.argv[1] != '-c':
+                print('Unsupported argument')
+
 
     def main(self):
         if len(sys.argv) == 1:
@@ -69,6 +71,7 @@ class todo():
             self.add_new_task()
         elif sys.argv[1] == '-r':
             self.remove_task()
+
 
 
 first = todo()
