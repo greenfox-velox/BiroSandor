@@ -1,5 +1,6 @@
 from tile import *
 
+
 class Gameboard():
     def __init__(self,canvas, input_field):
         self.canvas = canvas
@@ -17,3 +18,6 @@ class Gameboard():
     def create_board(self):
         for i in self.output:
             i.draw(self.canvas)
+
+    # def create_hero(self):
+    #     Herodown.draw_character()
