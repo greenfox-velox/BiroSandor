@@ -2,11 +2,12 @@ from tkinter import *
 
 class Tile():
     def __init__(self, x ,y):
+        self.size = 72
         self.x = x
         self.y = y
 
     def draw(self, canvas):
-        canvas.create_image(self.y*72, self.x*72, image=self.img, anchor=NW)
+        canvas.create_image(self.y*self.size, self.x*self.size, image=self.img, anchor=NW)
 
 class Floor(Tile):
     def __init__(self, x, y):

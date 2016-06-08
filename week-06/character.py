@@ -2,13 +2,14 @@ from tkinter import *
 
 class Character():
     def __init__(self, x, y, canvas,a):
+        self.size = 72
         self.a = a
         self.canvas = canvas
         self.x=x
         self.y=y
 
     def draw(self, img):
-        self.canvas.create_image(self.x*72,self.y*72,image=img, anchor=NW)
+        self.canvas.create_image(self.x*self.size,self.y*self.size,image=img, anchor=NW)
 
 class Hero(Character):
     def __init__(self, x,y, canvas, a):
@@ -48,14 +49,15 @@ class Hero(Character):
 
 class Enemy():
     def __init__(self, x,y, canvas):
+        self.size = 72
         self.canvas = canvas
         self.x=x
         self.y=y
 
     def draw_boss(self):
         self.img = PhotoImage(file = 'boss.png')
-        self.canvas.create_image(self.x*72,self.y*72,image=self.img, anchor=NW)
+        self.canvas.create_image(self.x*self.size,self.y*self.size,image=self.img, anchor=NW)
 
     def draw_skeleton(self):
         self.img = PhotoImage(file = 'skeleton.png')
-        self.canvas.create_image(self.x*72,self.y*72,image=self.img, anchor=NW)
+        self.canvas.create_image(self.x*self.size,self.y*self.size,image=self.img, anchor=NW)
