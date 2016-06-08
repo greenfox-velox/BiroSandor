@@ -21,5 +21,3 @@ class Gameboard():
 
     # def create_hero(self):
     #     Herodown.draw_character()
-
-    

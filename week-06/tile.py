@@ -1,7 +1,11 @@
 from tkinter import *
 
+
+
+
 class Tile():
     def __init__(self, x ,y):
+
         self.size = 72
         self.x = x
         self.y = y

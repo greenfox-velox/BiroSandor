@@ -19,31 +19,37 @@ class Hero(Character):
         self.img = PhotoImage(file = 'hero-down.png')
         super().draw(self.img)
 
+    def is_in_field(self,x,y):
+        return x >= 0 and x <= 9 and y >= 0 and y <= 9
+
+    def next_field_is_floor(self,x,y):
+        return self.a[y][x] == 1
+
     def draw_hero_down(self, event):
         self.img = PhotoImage(file = 'hero-down.png')
-        if self.y + 1 <= 9:
-            if self.a[self.y + 1][self.x] == 1:
+        if self.is_in_field(self.x, self.y+1):
+            if self.next_field_is_floor(self.x, self.y+1):
                 self.y += 1
         super().draw(self.img)
 
     def draw_hero_up(self, event):
         self.img = PhotoImage(file = 'hero-up.png')
-        if self.y -1 >= 0:
-            if self.a[self.y - 1][self.x] == 1:
+        if self.is_in_field(self.x, self.y-1):
+            if self.next_field_is_floor(self.x, self.y-1):
                 self.y -= 1
         super().draw(self.img)
 
     def draw_hero_left(self, event):
         self.img = PhotoImage(file = 'hero-left.png')
-        if self.x -1 >= 0:
-            if self.a[self.y][self.x - 1] == 1:
+        if self.is_in_field(self.x-1, self.y):
+            if self.next_field_is_floor(self.x-1, self.y):
                 self.x -= 1
         super().draw(self.img)
 
     def draw_hero_right(self, event):
         self.img = PhotoImage(file = 'hero-right.png')
-        if self.x +1 <= 9:
-            if self.a[self.y][self.x+1] == 1:
+        if self.is_in_field(self.x+1, self.y):
+            if self.next_field_is_floor(self.x+1, self.y):
                 self.x += 1
         super().draw(self.img)
 
