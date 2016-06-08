@@ -1,7 +1,8 @@
 from tkinter import *
 
 class Character():
-    def __init__(self, x, y, canvas):
+    def __init__(self, x, y, canvas,a):
+        self.a = a
         self.canvas = canvas
         self.x=x
         self.y=y
@@ -10,8 +11,8 @@ class Character():
         self.canvas.create_image(self.x*72,self.y*72,image=img, anchor=NW)
 
 class Hero(Character):
-    def __init__(self, x,y, canvas):
-        super().__init__(0,0, canvas)
+    def __init__(self, x,y, canvas, a):
+        super().__init__(0,0, canvas, a)
 
     def draw_hero_default(self):
         self.img = PhotoImage(file = 'hero-down.png')
@@ -20,33 +21,41 @@ class Hero(Character):
     def draw_hero_down(self, event):
         self.img = PhotoImage(file = 'hero-down.png')
         if self.y + 1 <= 9:
-            self.y += 1
+            if self.a[self.y + 1][self.x] == 1:
+                self.y += 1
         super().draw(self.img)
 
     def draw_hero_up(self, event):
         self.img = PhotoImage(file = 'hero-up.png')
         if self.y -1 >= 0:
-            self.y -= 1
+            if self.a[self.y - 1][self.x] == 1:
+                self.y -= 1
         super().draw(self.img)
 
     def draw_hero_left(self, event):
         self.img = PhotoImage(file = 'hero-left.png')
         if self.x -1 >= 0:
-            self.x -= 1
+            if self.a[self.y][self.x - 1] == 1:
+                self.x -= 1
         super().draw(self.img)
 
     def draw_hero_right(self, event):
         self.img = PhotoImage(file = 'hero-right.png')
         if self.x +1 <= 9:
-            self.x += 1
+            if self.a[self.y][self.x+1] == 1:
+                self.x += 1
         super().draw(self.img)
 
-# class Boss():
-#     def __init__(self, x,y, canvas):
-#         self.canvas = canvas
-#         self.x=x
-#         self.y=y
-#
-#     def draw_boss(self):
-#         self.img = PhotoImage(file = 'boss.png')
-#         self.canvas.create_image(self.x,self.y,image=self.img, anchor=NW)
+class Enemy():
+    def __init__(self, x,y, canvas):
+        self.canvas = canvas
+        self.x=x
+        self.y=y
+
+    def draw_boss(self):
+        self.img = PhotoImage(file = 'boss.png')
+        self.canvas.create_image(self.x*72,self.y*72,image=self.img, anchor=NW)
+
+    def draw_skeleton(self):
+        self.img = PhotoImage(file = 'skeleton.png')
+        self.canvas.create_image(self.x*72,self.y*72,image=self.img, anchor=NW)
