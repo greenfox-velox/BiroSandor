@@ -4,6 +4,7 @@ from hero import *
 from enemy import *
 from levels import *
 
+
 class Gameboard():
     def __init__(self,canvas):
         self.canvas = canvas
@@ -17,6 +18,7 @@ class Gameboard():
         self.create_hero()
         self.create_boss()
         self.create_skeletons()
+
 
 
     def create_field(self):
@@ -84,6 +86,8 @@ class Gameboard():
         for skeleton in self.skeletons:
             skeleton.skeleton()
             skeleton.draw(self.canvas)
+
+
 
     def next_level(self):
         self.level.next_level()
