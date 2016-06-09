@@ -1,8 +1,12 @@
 from tkinter import *
 
+
+
+
 class Tile():
     def __init__(self, x ,y):
-        self.size = 60
+
+        self.size = 72
         self.x = x
         self.y = y
 
@@ -12,7 +16,7 @@ class Tile():
 class Floor(Tile):
     def __init__(self, x, y):
         super().__init__(x,y)
-        self.img = PhotoImage(file='pics/floor.png')
+        self.img = PhotoImage(file='Pics/floor.png')
 
         # def draw(self):
         #     super().draw(self.floor_img)
@@ -20,7 +24,7 @@ class Floor(Tile):
 class Wall(Tile):
     def __init__(self, x, y):
         super().__init__(x,y)
-        self.img = PhotoImage(file='pics/wall.png')
+        self.img = PhotoImage(file='Pics/wall.png')
 
     # def draw(self):
     #     super().draw(self.wall_img)
