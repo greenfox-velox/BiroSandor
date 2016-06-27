@@ -3,6 +3,7 @@ from character import *
 from hero import *
 from enemy import *
 from levels import *
+from random import randint
 
 
 class Gameboard():
@@ -11,15 +12,21 @@ class Gameboard():
         self.level = Levels()
         self.input_field = self.level.map
         self.hero = Hero(0,0)
-        self.boss = Enemy(9,9)
-        self.skeletons = [Enemy(9,0), Enemy(6,9)]
+        self.boss = Enemy(0,9)
+        self.skeletons = [
+                Enemy(9,0),
+                Enemy(6,9),
+                Enemy(4,3)
+        ]
         self.create_field()
         self.create_board()
         self.create_hero()
         self.create_boss()
         self.create_skeletons()
 
-
+    def create_hero(self):
+        self.hero.hero_default()
+        self.hero.draw(self.canvas)
 
     def create_field(self):
         self.output = []
@@ -78,6 +85,7 @@ class Gameboard():
                 self.hero.hero_right()
                 self.hero.draw(self.canvas)
 
+
     def create_boss(self):
         self.boss.boss()
         self.boss.draw(self.canvas)
@@ -86,8 +94,6 @@ class Gameboard():
         for skeleton in self.skeletons:
             skeleton.skeleton()
             skeleton.draw(self.canvas)
-
-
 
     def next_level(self):
         self.level.next_level()

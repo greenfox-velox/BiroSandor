@@ -4,9 +4,6 @@ from character import *
 class Hero(Character):
     def __init__(self, x,y):
         super().__init__(0,0)
-        # self.health
-        # self.defend
-        # self.strike
 
     def hero_default(self):
         self.img = PhotoImage(file = 'pics/hero-down.png')

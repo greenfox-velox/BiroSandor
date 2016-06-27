@@ -7,4 +7,5 @@ class Character():
         self.y=y
 
     def draw(self, canvas):
-        canvas.create_image(self.x*self.size,self.y*self.size ,image=self.img, anchor=NW)
+        canvas.create_image(self.x*self.size,self.y*self.size
+                            ,image=self.img, anchor=NW)
