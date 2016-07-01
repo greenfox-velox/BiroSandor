@@ -23,6 +23,7 @@ header {
   width: 450px;
   height: 450px;
   margin: 25px;
+
 }
 
 footer {
@@ -43,12 +44,21 @@ footer {
 .list_of_images {
   width: 500px;
   height: 100px;
+  overflow: hidden;
 }
 
 .list_of_images img{
   width: 80px;
   height: 80px;
-  margin-top: 10px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.arrow_left, .arrow_right {
+ background-color: transparent;
+ border: none;
+ outline: none;
+ cursor:pointer;
 }
 
 .arrow {
@@ -63,4 +73,12 @@ footer {
 .mainpic .arrow {
   margin-top: 225px;
   margin-left: 25px;
+}
+
+.prev1.arrow {
+  display: none;
+}
+
+.list_of_images .current {
+  border: 5px solid blue;
 }
