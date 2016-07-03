@@ -14,12 +14,12 @@ header {
   height: 500px;
 }
 
-.pic {
+.picture {
   width: 500px;
   height: 500px;
 }
 
-.pic img {
+.picture img {
   width: 450px;
   height: 450px;
   margin: 25px;
@@ -41,17 +41,16 @@ footer {
   height: 100px;
 }
 
-.list_of_images {
+.thumbnail {
   width: 500px;
   height: 100px;
   overflow: hidden;
 }
 
-.list_of_images img{
+.thumbnail img{
   width: 80px;
   height: 80px;
   margin: 10px;
-  border: 1px solid black;
 }
 
 .arrow_left, .arrow_right {
@@ -79,6 +78,6 @@ footer {
   display: none;
 }
 
-.list_of_images .current {
+.thumbnail .current {
   border: 5px solid blue;
 }
