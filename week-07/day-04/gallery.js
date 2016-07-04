@@ -1,3 +1,5 @@
+'use strict';
+
 var imagelist = [
   {
     name: 'Family Guy',
