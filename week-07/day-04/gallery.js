@@ -39,13 +39,13 @@ var imagename = document.querySelector('h3');
 var imagesparent = document.querySelector('.picture');
 var bigPicture = document.createElement('img');
 var thumbnail = document.querySelector('.thumbnail');
-
+//
 imagename.textContent = 'Family Guy';
 
 
 imagesparent.appendChild(bigPicture);
 bigPicture.setAttribute('src', 'images/Family_Guy_Logo.svg.png');
-
+//
 for (var element = 0; element < 4; element++){
   var newimage = document.createElement('img');
   thumbnail.appendChild(newimage);
@@ -62,20 +62,15 @@ for (var element = 0; element < 4; element++){
 var mainPicStart = 0;
 var thumbnailStart = 0;
 
-function getPicsSrc (){
-  var thumbnailPics = document.querySelectorAll('.thumbnail img');
-  thumbnailPics.forEach(function(e, index) {
-  e.addEventListener('click', function() {bigPicture.setAttribute('src', e.src);
-  imagename.textContent = e.name; e.classList.add('current');
-  if (newimage.src === bigPicture.src) {
-    newimage.classList.add('current');
-  } else {
-    newimage.classList.remove('current');
-  }
-
-console.log(mainPicStart);
-console.log(thumbnailStart);
-
+function getPicsSrc (){var thumbnailPics = document.querySelectorAll('.thumbnail img');thumbnailPics.forEach(function(e, index) {
+    e.addEventListener('click', function() {
+      bigPicture.setAttribute('src', e.src);
+      imagename.textContent = e.name;
+      e.classList.add('current');
+      if (newimage.src === bigPicture.src) {
+      newimage.classList.add('current');
+    } else {
+      newimage.classList.remove('current')};
   mainPicStart = index + thumbnailStart;})})}
 
 var picture = document.querySelector('.picture img');
@@ -108,7 +103,7 @@ function decreasIndex () {
 function setName (element, newimage) {
   newimage.addEventListener('click', function(){bigPicture.setAttribute('src', imagelist[element].content)})
   newimage.setAttribute('src', imagelist[element]['content']);
-  name.textContent = imagelist[element]['name'];
+  name.textContent = (imagelist[element]).name;
 
 }
 
