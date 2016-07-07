@@ -1,0 +1,50 @@
+body {
+  background-color: #50e3c2;
+}
+
+.heading {
+    font-family: Lato-Light, sans-serif;
+    font-size: 64px;
+    color: #cecece;
+}
+
+.todo-item {
+    font-family: Lato-Regular, sans-serif;
+    font-size: 26px;
+    line-height: 2.2;
+    color: #cecece;
+}
+
+.button-text {
+    font-family: Lato-Regular, sans-serif;
+    font-size: 26px;
+    color: #ffffff;
+    background-color: #df69e8;
+}
+
+dt {
+  float: left;
+}
+
+main {
+  width: 500px;
+  margin: 0 auto;
+  /*background-color: #f7f7f7;*/
+}
+
+.function-button {
+ background-color: transparent;
+ border: none;
+ outline: none;
+ cursor:pointer;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.wrapper {
+  height: 100%;
+  background-color: #f7f7f7;
+}
