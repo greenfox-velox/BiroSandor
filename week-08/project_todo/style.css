@@ -3,40 +3,82 @@ body {
 }
 
 .heading {
-    font-family: Lato-Light, sans-serif;
-    font-size: 64px;
-    color: #cecece;
+  font-family: Lato-Light, sans-serif;
+  font-size: 64px;
+  color: #cecece;
+  text-align: center;
+  padding-top: 40px;
 }
 
 .todo-item {
-    font-family: Lato-Regular, sans-serif;
-    font-size: 26px;
-    line-height: 2.2;
-    color: #cecece;
+  font-family: Lato-Regular, sans-serif;
+  font-size: 26px;
+  line-height: 2.2;
+  color: #37404d;
+  margin-left: 10px;
+}
+
+.input_text {
+  font-size: 26px;
+  margin-left: 50px;
+  margin-right: 0px;
 }
 
 .button-text {
-    font-family: Lato-Regular, sans-serif;
-    font-size: 26px;
-    color: #ffffff;
-    background-color: #df69e8;
+  font-family: Lato-Regular, sans-serif;
+  font-size: 26px;
+  color: #ffffff;
+  background-color: #df69e8;
+  margin-left: 0;
 }
 
-dt {
-  float: left;
+li {
+  list-style-type: none;
 }
 
 main {
   width: 500px;
   margin: 0 auto;
-  /*background-color: #f7f7f7;*/
 }
 
-.function-button {
+/*.function-button {
  background-color: transparent;
  border: none;
  outline: none;
  cursor:pointer;
+}*/
+
+.del-button {
+  height: 30px;
+  width: 30px;
+  background-image: url('trash.png');
+  background-size: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor:pointer;
+}
+
+.done-button {
+  height: 30px;
+  width: 30px;
+  background-image: url('kor.png');
+  background-size: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor:pointer;
+}
+
+.true {
+  height: 30px;
+  width: 30px;
+  background-image: url('done.png');
+  background-size: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor:pointer;
 }
 
 img {

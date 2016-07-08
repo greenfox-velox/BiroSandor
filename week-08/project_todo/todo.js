@@ -1,22 +1,51 @@
 'use strict';
 //
 var buttonAdd = document.querySelector('.button-text');
-// var buttonDelete = document.querySelector('.function-button-delete');
-// var buttonDone = document.querySelector('.function-button-done');
+var buttonDelete = document.querySelector('.del-button');
+var buttonDone = document.querySelector('.done-button');
 buttonAdd.addEventListener('click', addNewTodo);
-// buttonDelete.addEventListener('click', deleteTodo);
+// buttonDelete.addEventListener('click', delTodo);
 // buttonDone.addEventListener('click', doneTodo);
 
-function listTheTodos (todos) {
 var item = document.querySelector('ul');
 
-todos.forEach( function (e) {
-  var newItem = document.createElement('li');
-  item.appendChild(newItem);
-  newItem.setAttribute('id', e['id']);
-  newItem.textContent = e['text'];
-})
-};
+function createOneNewTodo(todo) {
+ var newItem = document.createElement('li');
+ newItem.textContent = todo.text;
+ newItem.setAttribute('id', todo.id);
+ item.appendChild(newItem);
+ createDelButton(newItem);
+ createDoneButton(newItem, todo);
+}
+
+function createDelButton (parent) {
+ var del = document.createElement('button');
+ del.classList.add('del-button');
+ del.setAttribute('id', parent.id);
+ parent.appendChild(del);
+ del.addEventListener('click', function(event){
+   delTodo(event);
+ });
+}
+
+function createDoneButton (parent, todo) {
+ var done = document.createElement('button');
+ if (todo.completed) {
+  done.classList.add('true');
+ } else {
+  done.classList.add('done-button');
+ }
+ done.setAttribute('id', parent.id);
+ parent.appendChild(done);
+ done.addEventListener('click', function(event){
+   doneTodo(event);
+ });
+}
+
+function listTheTodos (todo) {
+  todo.forEach(function (e) {
+    createOneNewTodo(e);
+  })};
 
 
 function onLoad () {
@@ -26,13 +55,20 @@ function onLoad () {
      if (xhr.readyState == 4) {
        var response = JSON.parse(xhr.response);
        listTheTodos(response);
+      //  response.forEach(function(e) {
+      //   if (e.completed ) {
+      //     e.classList = 'true';
+      //   }
+      //  })
+
+       }
        };
-     };
+
   xhr.send();
 };
 
 onLoad();
-// setinterval(onLoad, 10000);
+// setInterval(onLoad, 10000);
 
 function addNewTodo () {
   var xhr = new XMLHttpRequest();
@@ -43,19 +79,38 @@ function addNewTodo () {
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.onload = function() {
      if (xhr.readyState == 4) {
-      var item = document.querySelector('ul');
-      var newItem = document.createElement('li');
-      item.appendChild(newItem);
-      newItem.textContent = text;
+      var response = JSON.parse(xhr.response);
+      createOneNewTodo(response);
      };
-     };
+    };
   xhr.send(newTodo);
 };
-//
-// function deleteTodo () {
-//
-// };
-//
-// function doneTodo () {
-//
-// };
+
+function delTodo (event) {
+  var xhr = new XMLHttpRequest();
+  var id = event.target.parentNode.id;
+  xhr.open('DELETE', 'https://mysterious-dusk-8248.herokuapp.com/todos' + '/' + id);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onload = function() {
+     if (xhr.readyState == 4) {
+      document.getElementById(id).remove();
+     };
+   };
+   xhr.send();
+};
+
+function doneTodo (event) {
+  var xhr = new XMLHttpRequest();
+  var id = event.target.parentNode.id;
+  var text = event.target.parentNode.textContent;
+  var result = JSON.stringify({text: text, completed: true});
+  xhr.open('PUT', 'https://mysterious-dusk-8248.herokuapp.com/todos' + '/' + id);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onload = function() {
+      if (xhr.readyState == 4) {
+        var response = JSON.parse(xhr.response);
+        event.target.classList.add('true');
+      }
+    };
+  xhr.send(result);
+};
