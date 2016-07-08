@@ -1,11 +1,7 @@
 'use strict';
-//
+
 var buttonAdd = document.querySelector('.button-text');
-var buttonDelete = document.querySelector('.del-button');
-var buttonDone = document.querySelector('.done-button');
 buttonAdd.addEventListener('click', addNewTodo);
-// buttonDelete.addEventListener('click', delTodo);
-// buttonDone.addEventListener('click', doneTodo);
 
 var item = document.querySelector('ul');
 
@@ -54,21 +50,19 @@ function onLoad () {
   xhr.onreadystatechange = function() {
      if (xhr.readyState == 4) {
        var response = JSON.parse(xhr.response);
-       listTheTodos(response);
-      //  response.forEach(function(e) {
-      //   if (e.completed ) {
-      //     e.classList = 'true';
-      //   }
-      //  })
-
-       }
-       };
-
+       listTheTodos(response)};
+     };
   xhr.send();
 };
 
 onLoad();
-// setInterval(onLoad, 10000);
+
+function reload () {
+  var container = document.querySelector('ul');
+  container.innerHTML = '';
+  onLoad();
+};
+setInterval(reload, 10000);
 
 function addNewTodo () {
   var xhr = new XMLHttpRequest();
