@@ -65,11 +65,11 @@ function reload () {
 setInterval(reload, 10000);
 
 function addNewTodo () {
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://mysterious-dusk-8248.herokuapp.com/todos');
   var input_text = document.querySelector('.input_text');
   var text = input_text.value;
   var newTodo = JSON.stringify({text: text});
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://mysterious-dusk-8248.herokuapp.com/todos');
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.onload = function() {
      if (xhr.readyState == 4) {
