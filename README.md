@@ -45,10 +45,7 @@ tkwandere the [game](https://github.com/greenfox-velox/BiroSandor/tree/master/we
 
 [Candy game](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/candyGame/candy.js)
 
-
-
-
-
+#Github links
 
 [Here is a link to my github velox-syllabus](https://github.com/BiroSandor/velox-syllabus)
 
