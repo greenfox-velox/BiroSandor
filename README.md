@@ -1,6 +1,6 @@
-Week 1 - 2
+#Week 1 - 2
 
-HTML and CSS
+##HTML and CSS
 
 
 [Link to the Anakin webpage](http://birosandor.github.io/Anakin/)
@@ -9,12 +9,12 @@ HTML and CSS
 
 
 
-Week 3 - 6
+#Week 3 - 6
 
-Python
+##Python
 
 
-Palindrome
+**Palindrome**
 
 [Create palindrome](https://github.com/greenfox-velox/BiroSandor/blob/master/week-03/day-04/demo1.py)
 
@@ -22,7 +22,7 @@ Palindrome
 
 [Bubble sort](https://github.com/greenfox-velox/BiroSandor/blob/master/week-03/Practise/bubble.py)
 
-Fractals
+**Fractals**
 
 [Here](https://github.com/greenfox-velox/BiroSandor/tree/master/Demo/Week%2005) is a fractal selector, where you can choose the fractal.
 
@@ -32,16 +32,16 @@ tkwandere the [game](https://github.com/greenfox-velox/BiroSandor/tree/master/we
 
 
 
-Week 7 -
+#Week 7 -
 
-JavaScript
+##JavaScript
 
 
-Image gallery
+**Image gallery**
 
 [Here](http://birosandor.github.io/ImageGallery/gallery.html) is a link to my image gallery.
 
-[Todo list](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/project_todo/todo.js) 
+[Todo list](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/project_todo/todo.js)
 
 [Candy game](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/candyGame/candy.js)
 
