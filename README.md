@@ -3,9 +3,9 @@
 ##HTML and CSS
 
 
-[Link to the Anakin webpage](http://birosandor.github.io/Anakin/)
+Anakin Skywalker CV[webpage](http://birosandor.github.io/Anakin/)
 
-[Link to the Wikipedia webpage](http://birosandor.github.io/Wikipedia/)
+Margaret Hamilton Wikipedia [webpage](http://birosandor.github.io/Wikipedia/)
 
 
 
@@ -26,9 +26,9 @@
 
 [Here](https://github.com/greenfox-velox/BiroSandor/tree/master/Demo/Week%2005) is a fractal selector, where you can choose the fractal.
 
-[Command lin todo list](https://github.com/greenfox-velox/BiroSandor/tree/master/week-05/day-03/Project)
+[Command line todo list](https://github.com/greenfox-velox/BiroSandor/tree/master/week-05/day-03/Project)
 
-tkwandere the [game](https://github.com/greenfox-velox/BiroSandor/tree/master/week-06)
+TkWanderer - The tkinter RPG [game](https://github.com/greenfox-velox/BiroSandor/tree/master/week-06)
 
 
 
