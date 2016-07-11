@@ -2,6 +2,11 @@ header {
   margin: 0 auto;
   width: 700px;
   height: 100px;
+  display: flex;
+}
+
+.play-button {
+  justify-content: space-between;
 }
 
 .mainpic {
@@ -80,4 +85,10 @@ footer {
 
 .thumbnail .current {
   border: 5px solid blue;
+}
+
+.play-image {
+  display: inline;
+  width: 50px;
+  height: 50px;
 }

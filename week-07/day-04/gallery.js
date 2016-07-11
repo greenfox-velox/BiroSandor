@@ -39,13 +39,13 @@ var imagename = document.querySelector('h3');
 var imagesparent = document.querySelector('.picture');
 var bigPicture = document.createElement('img');
 var thumbnail = document.querySelector('.thumbnail');
-//
+
 imagename.textContent = 'Family Guy';
 
 
 imagesparent.appendChild(bigPicture);
 bigPicture.setAttribute('src', 'images/Family_Guy_Logo.svg.png');
-//
+
 for (var element = 0; element < 4; element++){
   var newimage = document.createElement('img');
   thumbnail.appendChild(newimage);
@@ -62,7 +62,8 @@ for (var element = 0; element < 4; element++){
 var mainPicStart = 0;
 var thumbnailStart = 0;
 
-function getPicsSrc (){var thumbnailPics = document.querySelectorAll('.thumbnail img');thumbnailPics.forEach(function(e, index) {
+function getPicsSrc (){var thumbnailPics = document.querySelectorAll('.thumbnail img');
+  thumbnailPics.forEach(function(e, index) {
     e.addEventListener('click', function() {
       bigPicture.setAttribute('src', e.src);
       imagename.textContent = e.name;
@@ -81,10 +82,17 @@ function getNewPic () {
   name.textContent = imagelist[mainPicStart]['name'];
   var current = document.querySelector('.current');
 console.log(mainPicStart);
+console.log(thumbnailStart);
   if (mainPicStart > 3) {
     next1.style.display = 'none';
   }else{
     next1.style.display = 'block'
+  }
+  if (mainPicStart > 4) {
+    thumbnailStart = 3
+  }
+  if (mainPicStart === 0) {
+    thumbnailStart = -1
   }
 }
 
@@ -103,7 +111,8 @@ function decreasIndex () {
 function setName (element, newimage) {
   newimage.addEventListener('click', function(){bigPicture.setAttribute('src', imagelist[element].content)})
   newimage.setAttribute('src', imagelist[element]['content']);
-  name.textContent = (imagelist[element]).name;
+  var name = document.querySelector('h3');
+  // name.textContent = (imagelist[element]).name;
 
 }
 
@@ -147,12 +156,25 @@ function decreasIndexSlide () {
 
 var next = document.querySelector('.next.arrow');
 next.addEventListener('click', function (){ increaseIndex(); getNewPic(); thumbnail.innerHTML = ''; increaseIndexSlide(); slidePics(); getPicsSrc()});
-//
+
 var prev = document.querySelector('.prev.arrow');
 prev.addEventListener('click', function (){ decreasIndex(); getNewPic(); thumbnail.innerHTML = ''; decreasIndexSlide(); slidePics(); getPicsSrc()});
-//
+
 var next1 = document.querySelector('.next1.arrow');
 next1.addEventListener('click', function(){thumbnail.innerHTML = ''; increaseIndexSlide(); slidePics(); getPicsSrc()});
-//
+
 var prev1 = document.querySelector('.prev1.arrow');
 prev1.addEventListener('click', function() {thumbnail.innerHTML = ''; decreasIndexSlide(); slidePics(); getPicsSrc()});
+
+
+var playimages = document.querySelector('.play-button');
+playimages.addEventListener('click', function () {
+  setInterval(function () {
+    increaseIndex();
+    getNewPic();
+    thumbnail.innerHTML = '';
+    increaseIndexSlide();
+    slidePics();
+    getPicsSrc();
+  }, 1000)
+});
