@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.use(bodyParser.json());
+app.use(express.static('../../week-08/project_todo'));
 
 var list = [
     {
@@ -79,7 +80,12 @@ function removeElement (selectedId) {
 }
 
 app.delete('/todos/:id', function(req, res){
-  res.send(removeElement(req.params.id));
+  if (checkId(req.params.id)){
+      res.send(removeElement(req.params.id));
+  } else {
+    res.sendStatus(404);
+  }
+
 })
 
 app.listen(3000);
