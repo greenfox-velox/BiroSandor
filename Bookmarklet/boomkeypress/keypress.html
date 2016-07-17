@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: Bookmarklets</title>
+</head>
+  <body>
+    <a href="javascript:(function(){ window.addEventListener('keypress', buttonPressed);function buttonPressed() {var keyPressed = event.keyCode || event.which; if(keyPressed==105) { onIPress(); keyPressed=null;} else if (keyPressed == 104) {onHPress(); keyPressed=null;}else if (keyPressed==100) {onDPress(); keyPressed=null;}else if (keyPressed==97) {onAPress();keyPressed=null;}else if (keyPressed==112) {onPPress();keyPressed=null;}}var images = document.querySelectorAll('img');var headers = document.querySelectorAll('h1');var containers = document.querySelectorAll('div');var links = document.querySelectorAll('a');var paragraphs = document.querySelectorAll('p');var i = 0;var h = 0;var d = 0;var a = 0;var p = 0;function onIPress () {images[i].setAttribute('src', \'http://i254.photobucket.com/albums/hh114/inphact/000.gif\');setTimeout(function () {images[i].setAttribute('src', ''); i++;},1000)}function onHPress () {headers[h].innerHTML = '<img src=\'http://i254.photobucket.com/albums/hh114/inphact/000.gif\'>';setTimeout(function () {headers[h].innerHTML = ''; h++;},1000)}function onDPress () {containers[d].innerHTML = '<img src=\'http://i254.photobucket.com/albums/hh114/inphact/000.gif\'>';setTimeout(function () {containers[d].innerHTML = ''; d++;},1000)}function onAPress () {links[a].innerHTML = '<img src=\'http://i254.photobucket.com/albums/hh114/inphact/000.gif\'>';setTimeout(function () {links[a].innerHTML = ''; a++;},1000)}function onPPress () { paragraphs[p].textContent = '<img src=\'http://i254.photobucket.com/albums/hh114/inphact/000.gif\'>'; setTimeout(function () {paragraphs[p].innerHTML = ''; p++;},1000)}})()">
+      DestroyKeypress
+    </a>
+    <div>
+      <h1>Antoine de Saint-Exupery's 110th Birthday</h1>
+    </div>
+    <div>
+      <p>
+        I've always loved the imagery from The Little Prince, written by Antoine de Saint-Exupery, but I must confess that until I was assigned this doodle, I had never actually read the book. This was pretty much sacrilege on my part, as I come from working in kids books! My mother-in-law was quick to set me on the right path, lending me her translated copy (claiming it was the best, most poetic translation), and warned me to read the book with a pack of tissue. I followed her advice, finding a very quiet spot on the Google campus to read the book with a pair of sunglasses.
+      </p>
+    </div>
+    <div>
+      <h1>Mr. Saint-Exupery's Artwork</h1>
+    </div>
+    <div>
+      <p>
+        Cover to cover and an empty tissue pack later, I felt an even greater sense of responsibility to portray this beloved character as genuinely as possible. I painted the character in watercolor and ink, knowing there was no way the digital medium could capture the innocent, naive quality of Mr. Saint-Exupery's artwork. When the doodle finally launched, I was able to read user comments about how this doodle brought them joy, or how they recalled a passage from the book with a tear. It was such a wonderful feeling to emotionally connect with so many people at once and is probably one of the most rewarding experiences I've had as a doodler and illustrator.
+      </p>
+    </div>
+    <div>
+      <img src="http://placekitten.com/200/300">
+      <img src="http://placekitten.com/200/100">
+    </div>
+    <script>
+      // Create a script that replaces every h1 headline's content
+      // with 'Green Fox Academy Conquers the World'.
+      // Create a bookmarklet that does that on any website.
+    </script>
+    <script src="keypress.js"></script>
+    </body>
+</html>
