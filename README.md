@@ -36,14 +36,30 @@ TkWanderer - The tkinter RPG [game](https://github.com/greenfox-velox/BiroSandor
 
 ##JavaScript
 
+**Bookmarklet**
+Change headers
+[code](https://github.com/greenfox-velox/BiroSandor/blob/master/Bookmarklet/changeHeader/bookmarklet-1.js)
+
+Change images
+[code](https://github.com/greenfox-velox/BiroSandor/blob/master/Bookmarklet/changeImages/bookmarklet-2.js)
+
+Make items disappear with keypress
+[code](https://github.com/greenfox-velox/BiroSandor/blob/master/Bookmarklet/boomkeypress/keypress.js)
+
 
 **Image gallery**
 
 [Here](http://birosandor.github.io/ImageGallery/gallery.html) is a link to my image gallery.
 
-[Todo list](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/project_todo/todo.js)
+**candy Game**
+[Play](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/candyGame/candy.js)
+[Code](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/candyGame/candy.js)
 
-[Candy game](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/candyGame/candy.js)
+**Todo List**
+[Frontend](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/project_todo/todo.js)
+[Server](https://github.com/greenfox-velox/BiroSandor/blob/master/week-09/todoapp/server.js)
+[Database](https://github.com/greenfox-velox/BiroSandor/blob/master/week-09/todoapp/db.js)
+
 
 #Github links
 
