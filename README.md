@@ -38,15 +38,15 @@ TkWanderer - The tkinter RPG [game](https://github.com/greenfox-velox/BiroSandor
 
 **Bookmarklet**
 
-Change headers
+- Change headers
 
 [code](https://github.com/greenfox-velox/BiroSandor/blob/master/Bookmarklet/changeHeader/bookmarklet-1.js)
 
-Change images
+- Change images
 
 [code](https://github.com/greenfox-velox/BiroSandor/blob/master/Bookmarklet/changeImages/bookmarklet-2.js)
 
-Make items disappear with keypress
+- Make items disappear with keypress
 
 [code](https://github.com/greenfox-velox/BiroSandor/blob/master/Bookmarklet/boomkeypress/keypress.js)
 
