@@ -59,3 +59,5 @@ function onPPress () {
   paragraphs[p].textContent = '<img src="http://i254.photobucket.com/albums/hh114/inphact/000.gif">';
   setTimeout(function () {paragraphs[p].innerHTML = ''; p++;},1000)
 }
+
+alert('Distroy function is activated! Press "i" to destroy images, "h" to headers, "d" to divs, "a" to links, "p" to the paragraphs');
