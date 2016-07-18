@@ -1,7 +1,7 @@
 'use strict';
 
 var db = require('./db.js');
-var db_mongo = require('./db_mongo.js')
+// var db_mongo = require('./db_mongo.js')
 
 var express = require('express');
 var app = express();

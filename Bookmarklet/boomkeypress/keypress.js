@@ -56,7 +56,7 @@ function onAPress () {
 }
 
 function onPPress () {
-  paragraphs[p].textContent = '<img src="http://i254.photobucket.com/albums/hh114/inphact/000.gif">';
+  paragraphs[p].innerHTML = '<img src="http://i254.photobucket.com/albums/hh114/inphact/000.gif">';
   setTimeout(function () {paragraphs[p].innerHTML = ''; p++;},1000)
 }
 
