@@ -1,27 +1,24 @@
-
-
 window.addEventListener('keypress', buttonPressed);
 
 function buttonPressed() {
-    var keyPressed = event.keyCode || event.which;
-    if(keyPressed==105) {
-      onIPress();
-      keyPressed=null;
-    } else if (keyPressed == 104) {
-      onHPress();
-      keyPressed=null;
-    }else if (keyPressed==100) {
-      onDPress();
-      keyPressed=null;
-    }else if (keyPressed==97) {
-      onAPress();
-      keyPressed=null;
-    }else if (keyPressed==112) {
-      onPPress();
-      keyPressed=null;
-    }
+  var keyPressed = event.keyCode || event.which;
+  if(keyPressed==105) {
+    onIPress();
+    keyPressed=null;
+  } else if (keyPressed == 104) {
+    onHPress();
+    keyPressed=null;
+  }else if (keyPressed==100) {
+    onDPress();
+    keyPressed=null;
+  }else if (keyPressed==97) {
+    onAPress();
+    keyPressed=null;
+  }else if (keyPressed==112) {
+    onPPress();
+    keyPressed=null;
+  }
 }
-
 
 var images = document.querySelectorAll('img');
 var headers = document.querySelectorAll('h1');
