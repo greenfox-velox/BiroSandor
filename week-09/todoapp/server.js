@@ -1,7 +1,6 @@
 'use strict';
 
 var db = require('./db.js');
-// var db_mongo = require('./db_mongo.js')
 
 var express = require('express');
 var app = express();
@@ -13,8 +12,8 @@ app.use(express.static('../../week-08/project_todo'));
 
 app.get('/todos', function(req, res) {
   db.readAll(req, function (todo){
-      res.send(todo)
-    });
+    res.send(todo)
+  });
 })
 
 app.get('/todos/:id', function(req, res){
@@ -36,9 +35,9 @@ app.put('/todos/:id', function(req, res){
 })
 
 app.delete('/todos/:id', function(req, res){
-    db.deleteTodo(req.params.id, function(todo){
-      res.send(todo);
-    });
+  db.deleteTodo(req.params.id, function(todo){
+    res.send(todo);
+  });
 })
 
 app.listen(3000);
