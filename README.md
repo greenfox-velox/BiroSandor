@@ -57,7 +57,7 @@ TkWanderer - The tkinter RPG [game](https://github.com/greenfox-velox/BiroSandor
 
 **Candy Game**
 
-[Play](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/candyGame/candy.js)
+[Play](http://birosandor.github.io/candyGame/index.html)
 
 [Code](https://github.com/greenfox-velox/BiroSandor/blob/master/week-08/candyGame/candy.js)
 
