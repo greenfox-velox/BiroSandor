@@ -26,37 +26,37 @@ function handleError (err) {
   }
 }
 
-function readAll (data, callback) {
+function readAll (callback) {
     con.query('SELECT * FROM todos;', function(err,rows){
       handleError(err);
       callback(rows);
-    });
+  });
 }
 
 function readId (id, callback){
   con.query('SELECT * FROM todos WHERE id = ?', id,function(err,rows){
     handleError(err);
     callback(rows);
-    });
+  });
 }
 
-function createNewTodo(req, callback) {
-  con.query("INSERT INTO todos (text) VALUES ('"+req.body.text+"')", req.params.id,function(err,rows){
+function createNewTodo(text, id, callback) {
+  con.query("INSERT INTO todos (text) VALUES ('"+text+"')", id,function(err,rows){
     handleError(err);
-    callback({id: rows.insertId, text: req.body.text})
-    });
+    callback({id: rows.insertId, text: text})
+  });
 }
 
 function updateTodo(id, completed, callback) {
   con.query('UPDATE todos SET completed = 1 WHERE id = ?', id, function(err,rows){
     handleError(err);
     callback({id: id, completed: true});
-    });
+  });
 }
 
 function deleteTodo(id, callback) {
   con.query('DELETE FROM todos WHERE id = ?', id, function(err,rows){
     handleError();
     callback({id: id, destroyed: true});
-    });
+  });
 }

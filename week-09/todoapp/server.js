@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(express.static('../../week-08/project_todo'));
 
 app.get('/todos', function(req, res) {
-  db.readAll(req, function (todo){
+  db.readAll(function (todo){
     res.send(todo)
   });
 })
@@ -23,7 +23,7 @@ app.get('/todos/:id', function(req, res){
 })
 
 app.post('/todos', function(req, res){
-  db.createNewTodo(req, function (todo){
+  db.createNewTodo(req.body.text, req.params.id, function (todo){
     res.send(todo);
   });
 })
