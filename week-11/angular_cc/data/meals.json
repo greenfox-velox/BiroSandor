@@ -1,0 +1,21 @@
+[{
+	"meal": "peaches",
+	"calories": 240,
+	"date": "2016-08-10T22:00:00.000Z"
+}, {
+	"meal": "scrambled eggs",
+	"calories": 450,
+	"date": "2016-08-11T22:00:00.000Z"
+}, {
+	"meal": "hot dog",
+	"calories": 365,
+	"date": "2016-08-13T22:00:00.000Z"
+}, {
+	"meal": "salmon and chips",
+	"calories": 550,
+	"date": "2016-08-12T22:00:00.000Z"
+}, {
+	"meal": "slice of pizza",
+	"calories": 270,
+	"date": "2016-08-16T22:00:00.000Z"
+}]

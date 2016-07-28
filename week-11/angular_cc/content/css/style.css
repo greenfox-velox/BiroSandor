@@ -1,0 +1,44 @@
+.navbar {
+  margin-bottom: 0;
+}
+
+.jumbotron {
+  background-color: #255C80;
+}
+
+.form-group input.ng-invalid {
+  border: 2px solid red;
+}
+
+.form-group input.ng-valid {
+  border: 2px solid #00FFBF;
+}
+
+.form-group input.ng-untouched {
+  /*border: 2px solid #96DBF2;*/
+  border: 2px solid #cccccc;
+}
+
+/*.form-group input.ng-touched {
+  border: 2px solid #cccccc;
+}*/
+
+.db-container tr.ng-enter{
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+.db-container tr.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.db-container tr.ng-leave{
+  transition: 0.5s linear all;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.db-container tr.ng-leave.ng-leave-active {
+  opacity: 0;
+  transform: translateX(-100%);
+}
