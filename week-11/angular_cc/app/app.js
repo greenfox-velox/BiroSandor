@@ -16,16 +16,17 @@ CalorieCounter.factory('CalorieService', function(Config, $http) {
 
 
 
-CalorieCounter.controller('AppController', ['$scope', '$http', function($scope, $http, CalorieService){
+CalorieCounter.controller('AppController', function($scope, $http, CalorieService){
+  $scope.meals = [];
 
   $scope.addMeal = function () {
     $scope.meals.push({
-      meal: $scope.newMeal.meal,
+      meal: $scope.newMeal.name,
       calories: parseInt($scope.newMeal.calories),
       date: new Date($scope.newMeal.date)
     });
 
-    $scope.newMeal.meal = "";
+    $scope.newMeal.name = "";
     $scope.newMeal.calories = "";
     $scope.newMeal.date = "";
   };
@@ -60,7 +61,7 @@ CalorieCounter.controller('AppController', ['$scope', '$http', function($scope, 
   }).finally;
 
 
-  $http.get('./data/meals.json').success(function(data) {
-    $scope.meals = data;
-  });
-}]);
+  // $http.get('./data/meals.json').success(function(data) {
+  //   $scope.meals = data;
+  // });
+});

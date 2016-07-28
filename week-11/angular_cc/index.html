@@ -24,7 +24,7 @@
       <form class="form-inline" ng-submit="addMeal()">
         <div class="form-group">
           <label for="meals">meal</label>
-          <input type="text"class="form-control" placeholder="eg. veggies, meat, bread" ng-model="newMeal.meal" ng-required="true">
+          <input type="text"class="form-control" placeholder="eg. veggies, meat, bread" ng-model="newMeal.name" ng-required="true">
         </div>
         <div class="form-group">
           <label for="calories">calories</label>
@@ -61,7 +61,7 @@
         </thead>
         <tbody class="db-container">
           <tr ng-repeat="meal in meals | orderBy: order | filter: search" >
-            <td class="meal"> {{meal.meal}} </td>
+            <td class="meal"> {{meal.name}} </td>
             <td class="calories"> {{meal.calories}} </td>
             <td class="date"> {{meal.date | date}} </td>
             <td class="delete"><button type="button" ng-click="deleteMeal(meal)" class="delete btn btn-block" aria-label="Delete"><span aria-hidden="true">&times;</span></button></td>
