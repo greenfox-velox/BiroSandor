@@ -1,0 +1,33 @@
+{
+  "name": "caloriecounter",
+  "version": "1.0.0",
+  "description": "calorie counter app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szemannp/caloriecounter.git"
+  },
+  "author": "szp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szemannp/caloriecounter/issues"
+  },
+  "homepage": "https://github.com/szemannp/caloriecounter#readme",
+  "devDependencies": {
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.7.0",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.2.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql": "^2.11.1",
+    "nodemon": "^1.9.2"
+  }
+}
